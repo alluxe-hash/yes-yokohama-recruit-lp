@@ -1,171 +1,116 @@
 # YESグループ横浜 求人LP群
 
 ## プロジェクト概要
+YESグループ横浜（風俗求人）のターゲット別ランディングページ群。SEO最適化・構造化データ・レスポンシブデザインを実装した5ページ構成。
 
-YESグループ横浜の求人ランディングページ（LP）群です。ターゲットキーワードとユーザー属性ごとに3種類のLPを用意し、それぞれSEO最適化・構造化データ・OGP・レスポンシブ対応を実施しています。
+## ページ一覧・ターゲット
 
----
+| ファイル | ターゲット層 | 主要キーワード | 推定文字数 |
+|--------|----------|------------|---------|
+| `index.html` | 未経験・初心者 | 横浜 初心者向け風俗 未経験 求人 | 約10,000〜12,000字 |
+| `lp2.html` | 40代・50代・熟女・人妻 | 横浜 40代 ヘルス 求人 | 約10,000〜12,000字 |
+| `lp3.html` | 出稼ぎ・地方在住・短期集中 | 横浜 出稼ぎ 風俗 寮完備 | 約9,000〜11,000字 |
+| `lp4.html` | コンセプト・コスプレ好き | 横浜 メイド・OL・高級・ソフトヘルス 求人 | 約11,000〜13,000字 |
+| `lp5.html` | 男性スタッフ正社員 | 横浜 風俗店 男性スタッフ 正社員 | 約8,000〜10,000字 |
 
-## ファイル一覧・エントリーポイント
+## 公開URL（本番）
+- メインサイト: https://www.kyujin-yes.com/yokohama/
+- lp3 canonical: https://www.kyujin-yes.com/yokohama/dekasegi/
+- lp4 canonical: https://www.kyujin-yes.com/yokohama/concept/
+- GitHub Pages テスト: https://alluxe-hash.github.io/yes-yokohama-recruit-lp/
 
-| ファイル | ターゲット | キーワード軸 |
-|---|---|---|
-| `index.html` | 未経験・初心者（横浜） | 横浜 初心者向風俗 未経験 求人 |
-| `lp2.html` | 40代・50代・熟女・人妻 | 横浜 40代 ヘルス 求人 |
-| `lp3.html` | 出稼ぎ・地方在住・短期集中 | 横浜 出稼ぎ 風俗 寮完備 |
-| `lp4.html` | コンセプト・コスプレ好き | 横浜 メイド・OL・高級・ソフトヘルス 求人 |
+## 実装済み機能
 
-### URL（本番）
-- 公式: https://www.kyujin-yes.com/yokohama/
-- LP3 canonical: https://www.kyujin-yes.com/yokohama/dekasegi/
-- LP4 canonical: https://www.kyujin-yes.com/yokohama/concept/
+### SEO対策
+- [x] 各ページのmeta title・description・canonical URL
+- [x] 構造化データ（JobPosting・FAQPage・LocalBusiness・BreadcrumbList）
+- [x] Open Graph・Twitter Card
+- [x] ローカルSEO（geo tags・住所・座標）
+- [x] H1〜H3見出し階層（キーワード含有）
+- [x] 内部リンク（フッターに関連ページリンク）
 
----
+### コンテンツ（2026年4月改訂・大幅拡充版）
+- [x] FAQ: 全ページ6〜10問、各問の回答文が200〜400字（詳細・具体的）
+- [x] スタッフインタビュー: 全ページ3〜4名、各300〜400字の長文体験談
+- [x] COLUMNセクション: 全ページ3コラム（各400〜600字）追加
+- [x] 地域情報セクション: index.html・lp2.html（横浜・曙町エリア情報）
+- [x] 収入シミュレーション表（全ページ）
+- [x] 体験入店の流れ（5ステップ）
+- [x] 店舗紹介（店舗ごとの詳細情報・画像プレースホルダー）
+- [x] 職場環境ギャラリー（画像プレースホルダー6枚）
 
-## 各LP概要
+### デザイン
+- [x] レスポンシブ（@media max-width:600px 対応）
+- [x] フローティングCTA（スクロール後に出現）
+- [x] FAQ アコーディオン（JavaScript）
+- [x] 画像プレースホルダー（差し替え用枠・説明テキスト付き）
+- [x] CSS Gridによるメリット・店舗・インタビュー一覧
+- [x] 手作り感のあるデザイン（ノートブック風メリットカード・斜めグラデーション等）
 
-### index.html（LP1：未経験・初心者向け）
-- **Canonical**: https://www.kyujin-yes.com/yokohama/
-- **カラー**: ピンク系（#d45f8a → 彩度を抑えた自然なトーンに変更）
-- **フォント**: Noto Sans JP + Zen Maru Gothic
-- **セクション**: ヒーロー・保証ストリップ・9メリット・収入シミュレーション・5ステップ・タイムライン・FAQ（8問）・インタビュー×4・3店舗紹介・フローティングCTA
-- **構造化データ**: JobPosting（identifier・validThrough付）・FAQPage（8問）・LocalBusiness×3（各店舗個別URL・geo座標付）・BreadcrumbList
-- **SEO改善（2026-04-21）**: FAQ onclickバグ修正・JobPosting identifier追加・LocalBusiness個別URL設定・BreadcrumbList URL整合・data-theme削除・フッター内部リンク追加
-- **デザイン刷新（2026-04-21）**: AI感低減・斜めストライプヒーロー背景・グラデ下線セクションタイトル・左ボーダーメリットカード（ノートカード風）・縦長フォトフレームインタビューアバター・格子パターン画像プレースホルダー・reassure-strip暗色グラデ・ステップ番号を白抜き枠線スタイルに変更
-- **文字数**: 約80,000文字
+## データモデル・構造化データ
 
-### lp2.html（LP2：40代・熟女・人妻向け）
-- **Canonical**: https://www.kyujin-yes.com/yokohama/lp2/
-- **カラー**: バーガンディ系（#8b3a62）
-- **フォント**: Noto Sans JP + Shippori Mincho
-- **セクション**: ヒーロー・選ばれる理由（円形番号バッジ＋コネクター）・リアル収入例・9メリット・FAQ・2店舗紹介・インタビュー×4（カード型写真枠付）・ギャラリー×6（交互大小グリッド）
-- **構造化データ**: JobPosting（identifier付）・FAQPage（6問）・LocalBusiness×2（geo座標付）・BreadcrumbList
-- **SEOスコア**: 推定81〜85点（H1キーワード・identifier・FAQバグ修正・内部リンク改善済）
-- **デザイン**: 2026-04-21 デザイン刷新（画像枠囲み線全挿入・カード型インタビュー・交互大小ギャラリー・AI感低減・女性向けポップ化）
-- **文字数**: 約65,000文字
+### JobPosting（各ページ）
+```json
+{
+  "title": "横浜 未経験・初心者向け 風俗求人 キャスト（体験入店）",
+  "hiringOrganization": { "name": "YESグループ横浜" },
+  "jobLocation": "横浜市中区曙町",
+  "baseSalary": { "minValue": 30000, "unitText": "DAY" },
+  "employmentType": "PART_TIME"
+}
+```
 
-### lp3.html（LP3：出稼ぎ・寮完備）
-- **Canonical**: https://www.kyujin-yes.com/yokohama/dekasegi/
-- **カラー**: パープル系（#9b3b8a）＋アクセントオレンジ（#e87b2e）
-- **フォント**: Noto Sans JP + Zen Maru Gothic
-- **ターゲット**: 地方在住・出稼ぎ希望・短期集中・18〜45歳
-- **SEOスコア**: 推定88〜90点（H1/H2キーワード・identifier・内部リンク改善済）
-- **文字数**: 約64,400文字
+### LocalBusiness（店舗別）
+- eroina（エロいーな）: https://yesgrp.com/yokohama/eroina/
+- あわほたる: https://kanto.qzin.jp/awhotaru/
+- 螢（ほたる）: https://kanto.qzin.jp/renaissance/
 
----
+## SEO改善履歴
 
-## LP3 詳細仕様（出稼ぎ・寮完備）
+### 2026年4月（大幅コンテンツ拡充）
+- **FAQ拡充**: 各ページ6〜10問、各回答200〜400字（旧：50〜80字）
+- **インタビュー長文化**: 各300〜400字（旧：50〜80字）
+- **COLUMNセクション追加**: 全5ページに3コラムずつ追加（各400〜600字）
+- **地域情報追加**: index.html・lp2.html にローカルSEO強化セクション
+- **lp4.htmlインタビューセクション追加**: 3名の体験談新設
+- **lp3.htmlインタビュー**: 3名→4名に増加・長文化
 
-### 対象キーワード
+## 推定SEOスコア（改訂後）
 
-| キーワード | 検索数 | 競合 | CTR | 優先度 |
-|---|---|---|---|---|
-| 横浜 出稼ぎ ファッションヘルス 寮 | 80-150 | 2 | 87% | ★★★ |
-| 横浜 出稼ぎ 風俗 求人 | 150-300 | 3 | 83% | S（最大ボリューム） |
-| 横浜 ヘルス 短期 出稼ぎ 求人 | 60-120 | 2 | 86% | S |
-| 横浜 大手 出稼ぎ ヘルス 寮あり | 40-80 | 2 | 88% | S |
-| 横浜 ヘルス 寮完備 求人 | 80-150 | 2 | 87% | S |
-| 横浜 風俗 出稼ぎ 交通費支給 | 60-120 | 2 | 86% | S |
-| 横浜 ファッションヘルス 1週間 出稼ぎ | 30-80 | 1 | 90% | S |
-| 横浜 風俗 出稼ぎ 30万 保証 | 30-70 | 1 | 91% | S（競合最小） |
+| 指標 | 改訂前 | 改訂後目標 |
+|------|--------|---------|
+| 本文文字数 | 3,000〜5,500字 | 8,000〜13,000字 |
+| FAQ問数 | 4〜6問 | 6〜10問 |
+| FAQ回答文字数 | 50〜80字 | 200〜400字 |
+| 総合SEOスコア推定 | 78〜85点 | 88〜93点 |
+| 上位表示期待順位 | 20〜50位 | 5〜15位 |
 
-### セクション構成
+## 未実装・今後の課題
 
-1. **ヒーロー** — 7日間30万円保証・即日入寮・荷物1つでOK
-2. **保証ストリップ** — 6大特典バー（保証・入寮・交通費・日払い・盗撮対策・24h相談）
-3. **保証詳細** — 30万円保証Big Box＋6メリットカード
-4. **寮情報** — 個室・オートロック・Wi-Fi・1泊2,500円・徒歩圏内・送迎
-5. **収入シミュレーション** — 3日〜1ヶ月の期間別収入例テーブル
-6. **全8店舗カード** — 各店舗URL・日給目安・ジャンル・説明付き
-7. **応募フロー5ステップ** — LINE相談→店舗選択→入寮→研修→稼働
-8. **インタビュー3名** — 地方出身者のリアルな声
-9. **FAQ（6問）** — アコーディオン形式・FAQPage構造化データ対応
-10. **最終CTA** — LINE相談・公式サイト応募・全8店舗リンク集
-11. **フッター** — 全8店舗リンク・免責事項
+- [ ] 実際の写真差し替え（全プレースホルダー → WordPress経由）
+- [ ] OGP画像の本番URL更新（ogp.jpgの実配置）
+- [ ] lp3.html の構造化データ LocalBusiness 追加
+- [ ] seo-check-lp4.html で指摘のあった missing alt属性 対応（画像差し替え時）
+- [ ] Core Web Vitals 最適化（画像圧縮・遅延読み込み）
+- [ ] lp5.html のインタビューセクション追加（男性スタッフ体験談）
+- [ ] sitemap.xml の作成
+- [ ] robots.txt の設定
 
-### 8店舗リンク
+## 開発メモ
 
-| 店舗名 | URL |
-|---|---|
-| 泡ほたる | https://kanto.qzin.jp/awhotaru/ |
-| エロいーな | https://yesgrp.com/yokohama/eroina/ |
-| ほたる | https://kanto.qzin.jp/renaissance/ |
-| 花椿 | https://www.kyujin-yes.com/yokohama/hot/top/ |
-| 横浜プロダクション | https://kanto.qzin.jp/satindoll/?v=official |
-| シャロン | https://kanto.qzin.jp/ypro/?v=official |
-| グラマーグラマー | https://yesgrp.com/yokohama/glamour/ |
-| バッドカンパニー | https://kanto.qzin.jp/yeskyu/?v=official |
+### カラーパレット
+- index.html: `--primary: #d45f8a`（ピンク系）
+- lp2.html: `--primary: #8b3a62`（バーガンディ）
+- lp3.html: `--primary: #7c3aed`（パープル）
+- lp4.html: `--primary: #b4508c`（マゼンタピンク）
+- lp5.html: `--primary: #1a3a5c`（ネイビー）
 
-### 構造化データ（JSON-LD）
+### フォント
+- index.html: Zen Maru Gothic + Noto Sans JP
+- lp2.html: Noto Sans JP + Shippori Mincho
+- lp3.html〜lp5.html: Noto Sans JP + Zen Kaku Gothic New
 
-- **JobPosting**: タイトル「横浜出稼ぎ・寮完備キャスト（18〜45歳）」・日給20,000〜100,000円・PART_TIME・2026-04-20〜2026-12-31（identifier付）
-- **FAQPage**: 6問（交通費・寮環境・短期・未経験・身バレ・友人同伴）
-- **BreadcrumbList**: 求人TOP → 横浜出稼ぎ・寮完備 全8店舗
-- **LocalBusiness**: YESグループ横浜（geo座標付・openingHours付）
-
-### SEOメタタグ
-
-- `canonical`: https://www.kyujin-yes.com/yokohama/dekasegi/
-- `og:image`: https://www.kyujin-yes.com/yokohama/lp3/ogp.jpg
-- `geo.region`: JP-14
-- `geo.position`: 35.4437;139.6380
-- Twitter Card: summary_large_image
-- Fontプリロード：`<link rel="preload" as="style">`
-
----
-
-## 共通技術仕様
-
-- **静的HTML単一ファイル構成**（CSS・JS inline）
-- **外部依存**: Google Fonts（Noto Sans JP / Zen Maru Gothic / Shippori Mincho）のみ
-- **CDN**: jsDelivr / Google Fonts
-- **JavaScript**: FAQアコーディオン・スクロール300px後フローティングCTA表示
-- **レスポンシブ**: CSS Grid + Flexbox、@media (max-width: 600px)
-- **アクセシビリティ**: aria-label・role・tabindex・キーボード操作対応
-
----
-
-### lp4.html（LP4：コンセプトヘルス 4店舗 ★NEW）
-- **Canonical**: https://www.kyujin-yes.com/yokohama/concept/
-- **OG image**: https://www.kyujin-yes.com/yokohama/lp4/ogp.jpg
-- **テーマ**: ダークモード（--bg: #0e0820）＋マルチカラー（メイド/OL/高級/ソフト別）
-- **フォント**: Noto Sans JP + Shippori Mincho
-- **ターゲット**: コスプレ・コンセプト好き・18〜45歳・未経験〜経験者
-- **4コンセプト**:
-  - 🎀 メイド系 → グラマーグラマー（最大100,000円/日）
-  - 💼 OL系 → バッドカンパニー（最大70,000円/日・採用率98%）
-  - 👑 高級ドレス系 → シャロン横浜（最大105,000円/日・バック率85%）
-  - 🌿 ソフト・癒し系 → エロいーな（最大80,000円/日・ペットOK）
-- **セクション**: ヒーロー・コンセプト概要Strip・稼げる3理由・4コンセプト選択・9メリット・収入実績×3・シミュレーションテーブル・4店舗カード・キーワードマトリクス・寮情報・5ステップフロー・持ち物リスト・FAQ（6問）・最終CTA
-- **構造化データ**: JobPosting・FAQPage（6問）・BreadcrumbList
-- **特記事項**: Cloudflare Insightsスクリプト除去済み・フローティングCTA（スクロール300px後）・キーボード操作対応FAQ
-- **文字数**: 約60,900文字
-
----
-
-## 未実装・今後の推奨対応
-
-- [ ] `og:image`（各LP）の実画像URLへの差し替え
-- [ ] LINEリンク（`https://lin.ee/XXXXXXXX`）を実際の公式LINEアカウントURLへ差し替え
-- [ ] LocalBusiness構造化データへの実電話番号追加
-- [ ] WordPress/CMSへの移植（各セクションをブロック化）
-- [ ] Google Search Consoleでの構造化データ検証
-- [ ] Core Web Vitals測定・画像最適化（WebP変換）
-- [ ] A/Bテスト（ヒーローコピー・CTA文言比較）
-- [x] LP3フッターにlp4/lp2/indexへの内部リンク追加済（2026-04-21）
-
----
-
-## 更新履歴
-
-| 日付 | 内容 |
-|---|---|
-| 2026-04-21 | index.html SEO改善（FAQ onclickバグ修正・JobPosting identifier/validThrough・LocalBusiness個別URL・BreadcrumbList整合・内部リンク追加） |
-| 2026-04-21 | lp2.html デザイン刷新（全画像枠囲みプレースホルダー挿入・カード型インタビュー・交互大小ギャラリー・セクション装飾バー・AI感低減） |
-| 2026-04-21 | lp2.html SEO改善（H1キーワード・FAQバグ修正・identifier・フッター内部リンク） |
-| 2026-04-21 | lp3.html SEO全項改善（H1/H2キーワード・店舗URL修正・identifier・内部リンク） |
-| 2026-04-21 | lp4.html SEO全項改善（H1/H2・内部リンク・LocalBusiness・identifier） |
-| 2026-04-20 | lp4.html 新規作成（コンセプトヘルス4店舗・ドリューデザインリニューアル） |
-| 2026-04-20 | lp3.html 新規作成（出稼ぎ・寮完備・全8店舗） |
-| 2026-04-18 | lp2.html 作成（40代・熟女・人妻向け） |
-| 2026-04-06 | index.html 作成・SEO最適化完了 |
+### 注意事項
+- LINE URL `https://lin.ee/XXXXXXXX` は全ページで差し替え要
+- lp5.html の LINE URL は `https://lin.ee/YYYYYYYY`（男性スタッフ専用）
+- 全ページ18歳以上・高校生不可の免責事項あり
